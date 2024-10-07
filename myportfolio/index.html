@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity=
+"sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+             crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utlis.css">
+</head>
+
+<body>
+    <!-- Navbar header section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="logo-heading">KRISH JHA</h2>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars hamburger-icon"></i>
+                <i class="fas fa-times cross-icon"></i>
+            </div>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list-items">
+                        <a class="links" href="#home">
+                              Home
+                          </a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#portfolio">
+                              Portfolio
+                          </a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#about">
+                              About
+                          </a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#services">
+                              Services
+                          </a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#contact">
+                              Contact Me
+                          </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main hero banner -->
+    <section id="home" class="hero">
+        <div class="intro">
+            <div class="headings">
+                <h3 class="greet-heading">Hello, I'm</h3>
+                <h1 class="my-heading">KRISH JHA</h1>
+                <h4 class="sub-heading">
+                    MERN STACK DEVELOPER
+                </h4>
+            </div>
+            <div class="akash">
+                <img class="akash" src="krrish.png"></img>
+            </div>
+            <div class="intro-buttons">
+                <button class="btn common-btn">Hire Me</button>
+                <button class="btn ghost-btn">Get Resume</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-heading">
+            <h1 class="my-heading text-center"> few drops of skills</h1>
+        </div>
+        <div class="portfolio-content">
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="web design.jpg"
+                                 alt="Web Design Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">Web Design</h3>
+                        <p class="small-para blue-text">Designing</p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="web development.jpg"
+                                 alt="Web Development Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              Web Development
+                          </h3>
+                        <p class="small-para blue-text">Development</p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAwFBMVEUAAAD0TSf////zPAD0SyTzPQCIiIjr6+uYmJj0SSD/+fgNDQ2srKz4+Pj0Rx3zPwghISEmJib0RBfQ0NC4uLj1VDBVVVXj4+OhoaEXFxf82NJlZWWQkJD94d32blX+9PL6tqz4npDZ2dn5rqP6vLP1ZEj82dPKysp/f3/7ysP95+P5qJz5oZP3jXs8PDzAwMBdXV33gGz4loZvb2/2eGL1Xj/1aE33iHb7w7v2clpNTU11dXUyMjL1WDf3kYHzKAB1H+/6AAAODElEQVR4nO2caWOiPBDHK4FWXIVd1NbHetV6LLbWnvbadr//t3oIQjIJhMug6PJ/V4yB/JxMZiahJ5VSJ/t+gAKoZFAywCoZlAywSgYlA6ySQckAq2QgnYGhIWSpcvukUk3kyDQkdyuXgbbsD4cjXZfaKZH1NVkMh0P7WZPbr1QGaKJgDdu5QLAeFE8juRBkMvAQ5ARBbStE31Kng0QGBIEDoSIfgjWiDBZSDUEeA4AgF0tAfdB/W6bflcaAQZAHBDQE3U9B77rpKjsVWQw4BDlAEDHQ321X2U1DEgM4WXOCoM1A5xU6YOtx2+khiYE+reUNwbqhXfeBT/Tx751BxXgJgSB1dVANeocHsDb69rFfBhaOjkMhqDIhGGu/3ysTXEZKARigyUITQZBqCYZx7YTii7cpRGA8FIABXhH6u4GgWpqmIZPpEnX3z2CzKIoh5JM7EBnvyt4ZIM8r99FOLIGXURnunQEiccHMtYTpbDTq7wqCaqB3GjjppuUpbT/bMUAgNJrhaNV5EBOth9kgqIZlagghzbQMFQp/6JZPfGHeKtJfu+A2o2tfaQ1iKwaIiQ5dS8AyDA5CoqKKhSrLa3vWX/Rn9uj7C6rtILD7QIuKqr6wNwFSU0LYhgHiAuSZb4W02pEYgqVdLURjUm6sCmI9TUXVX4TN9d0x4BEoC0Q+4nxjXLCkokfhiFwGaoW9UhAGAQSKTWIXxPnFGAiq2eX74hjogyIyCCKADAJ2HekYTR5ZgIGxLCCDEATKkMwFLeRDMQRkRyPADL4DDKbC5jvyiWEIFGXpO0XedF0IoulgMB60NoT+vqYMF7Puq1Gx9G84X3D94H0wGLzTS/jPjXazNqLr8F+AZDNWGATB6gAnzmSNN2meyXDtvzhcwJmyExCBPjED3ZFJnW/b0D2lHU0mBiIETlaLLcEQQTDCHk9f0xbvyG1hUDN7BZUCRBv6dSQLMNhprCxGoCiOS7BusTUkhgDqQ7Qu8Ne3DepjHNdZHAZRCGrOI2v9Ln7wpNOBros1WhewiA98pt8oDoMoBBsGXcUWQVgEHSN1B11aJVTJyjeiKVBhGEQi8Bk4ENSkEGjN/A3UhywChl4sCoNoBISBB2E9rUxv2BYBCKEMVNW/2KcOoSAMtGgElMEGgq6rutlmE7wFF8bRuTCjwzWeCQM6QYrBgA9ZIxjQyNn4YtuAX9YdGY196M4JDR3tos2FYB4gZrCJFbC0N7bRK7NzblHTcm2ngtPIV3Ltumg+ETxFPIO1P/F565nA2jgTI9ltZFqmZoIZ9160tTEVgy//oQyupPLGMGAT7f5kNIKJATxpUAwGqeYC+QUtrkDyyJ4i0d+D/RAtQdtiMOB/0UgGE/8nRGyFZMgfIjHFi00X+s9iMKiYkTUvloEy3bgzkwVXewmGivzhBV8L5mRFQRhUtKvkDGprZBkW4hGEnKdCj8HNGUdd9qhjURhUtEhLYBg4fv7x9YqdCLVp6JGyv2FlqW/EDiuaQdC8kipDzhQFgWMQ/DzMCpw+3wItu0vEbxhFM3jIfF4vS+4cMR3iGAgQ+FGhNV3eXo9Gt8t12IncEAagjjTx3WdqFplqKGIIMQxiEDxauuHuGIYWnMIYwINa78j5pomsZdrxZKuliSEg7vBUEgT+RJj9xaPXhWVhUK32GTD36l7f3kz6fCwer4w1VQGExUDHOZ9gJzDcHdKyuX198/j6vH5pGxred7Vggqk7vzCwA9WJqbGtmGGrKheH5sRAAGGxmcRGO2ylE6wI7LlDr2ltOLNHV88V8h6Avr6ddEHDYXdy6/IOC9qGu2EQDmHgjdIKS7EFCCL2Shyo11+b8VghoaRbZTPDbO493TKZfa8tCAHsuYYgEByN0J+DbaEmbqho3QQ/cbNq4zX4gTJJdwxjiz3XAISIPVchggq/oxzQAs8HIYPQytbNrhgEIUTsuQomgttWuIx4wnlTGAOv4oyWrPeZXZkpT+NsdQbjln0o8Z5rBIKK+hWaKwA50zuCQcXSlvbC7WPYnyz1QHgZq+3O4nAQHrzbm9x14URwpVsx+8647qQbAVHHZziRkY4PQznRZYbMacszWexga208WNVcs2NYR/8yVlQNBWuBIr+/kX92K4O2PZvHQViaCFmcn4hBQBZH+/rNni2GwZlRS8JgC219RpMz+1qfXxJiEJAYaYFM0z2aZ7Sng4dbmHQUnEEAAq84BKTYSHNfVXdSJ1BeLzyDGAhxCGjWww9UI5NiWHgGkRCiVwT3236wyw1Up7tTdsr4P5WcZEzGOxwoZPFOaAUglLhFIMpXLVCMlvtGJ70HzkWtweNEyrs8IggJEIC00R5oaPOanoYqSxpp1lIHPbHCJ6NR+/nWdu8i532mcAiDJA8Pj2fW+vbbZPJmd5lk8FEmA/fHN19er8k9GnNJ73SFQUiEIDzxg7JleUR3+Mb6cTLzve3Zqnr/8+RE2jueAQjJEAR2oXJB4L4VoD/fvpEZNm6dfpz4knAHVzyEpAic0DoqcbzdFoFuOO6l/XptE9tv1j/vThhteQsqFkJiBPi0wZUoc3xrb+ELXNtH62/G9i9/nASV/R68IIQkKwKVhZZ2EMPsysj6Irfr943nK2r7F63T85DRy2YAIKSwgo0M0/HVNxO72+8vFv2uPXpcm1qmf6zihNka+npgbf+PcPiyGRAI71ksGP92pvc+Ey6sp+/AjXmm3yNq+/Pq5c/o4UtnUDEf+rWhHb6Vkqdc26+8X731qe33PsKmfv4M3P8NZGbeAM4iZ/ia2X64sRfU9n/fxY87PwY71Sbk+x6RkO9s3rmMmfrHw8C1fW3g2H6N2r7Y7x8bA9fvV6Dtj1Pb/uEy2MQ80yVj+09J/P5RMNjEPIOrCfX7q969hNEfBgMv1Ye239rW9g+HwSbmYVP9zlMWv3+QDEiq3+dT/Vy07+Hy8lN9OzzVP3YGfqpPbb+Zj+0XkoGX6rNlrssdjL4YDFy/r4IyV+Mid9svEAM35Ht5TZXqHw+DzbK3zpDqHwUDL9V3bJ+mO6fJU/1DZ6D7qT6wfdkhXybtaPg413VS/RlM9X/te+y+8h79JtXnylzZU/1clOPwXb/flpvq56JcRu/6fQ2n+tTvd57+2/dYRZI+fDfmYWx/VTTb5yV3+Jr2dQC2z0vO8DepPlfm2kfIl0nbjt61fQum+rjMVdipH6pth28A21cc299xuiNF2Yav4/90+PUKbH9HqX4uSv3ju7s7g0dY4q3KK/HuRWmGz5zm8kq8h2j7vBL++AaO99ky115S/VyUyPZDT3Mdj2JsX6sIT3Mdj8KHj0u8Jnuaq8Of5joeBYfv7mx+T0Cqv8cy107E2T6yEp/mOh75tp/+NNfxaBPzcCXe4qb6uQim+g1c5tpviXcvKliJdy86sFQ/F93/g7ZfqlSpUnJ13qvPN1p1Ts//rYjK1e+mwumsnjqt+OFLcH3LbvJVtcET2KRX6SKsT/LFKnOd9peom1PSvpfq9lvp4yyUgKMnv8nT2DGMTkw/9OHr8PIPalqJHqdK2sfdUJ5+iwgoit+k5Y0h2kkcLgP65AH5tlvlL8T1dGAMLsUIlJbXhl55iurqUBnQBwzR56bNfZDKR+90ox6YHofKYB7FwFucqL9X5t7XVuQK2I46UAbn3KjPmqtWqzVvnsFHDrGD1hExYCKjsx44VfZRvSAjoU18f3BEDP5ABOI79vwmZF2gDMAp7MNk0AEIPiPa+fHBD+7CMTAAAWL0/fg48XgY/FJSPh7R8TAAUfLvdN/coU/8c9nr9fLbF6UjUSLbfXY8kUSOxgetzSd4RUnG4LPn6ZS0uGQuQQb3Kz+jbbTywTAmd1tFtqOo8D7tZZ1+j7GjZAxomk5CTOqWcP+UwfyCuQfTqyzRxzlN2O4nBJeQAUUoYkCHis2JMuDVlI8A/L7RJSOGwUXIw/EMlAaUNAYx5ppFYFmIbpieQbi2ZqBIfy8ORIn+pSf+pnfFYpByCY/XHem64V8K1JTOi8VAkX1qkjIgeAvH4Gy+msOCb4sfxJb6yMSgOm42m3Q1w381m+OPPBg0Opu98w7Xxd4ZuIqJEyUxIB4QBHOSXxrL5g+4hwrNF2QzAKu4ZIdAGZB1oagMaK1H8r5LyNooiYGkOJH2TT2CZAYgRvJP6364Hg54YgkM4vOFeAa0a3Ybb3vRx+FS53HRGNDYTTYDusJxy27hGNCdINkM6OZCg/3gH2IAIjI2cSwcg/zmAg2SuNS8cAzoeiX9TAKIxJmstHAM6LXoak8G0bKgosBjrYVjEHo/OYLbjQ3gEnbDgFCPZ0BXMPmVVSYRnhMKsQzq5ArwUckY0OGQoETEgOQGwHFJRxA4gXHRnDfH8HiSgAHIZukLYQIG/4kYeNnqLy4rpAzGHoQfIFWXz+AkcCSPk4ABzCuanWpndZ6YAbhjo97r1RlT5GsojXmnV4VeK4+tp8hzKGIGd3y7emIGdf6rUQwCymWjhT+FkYzBCX+cLzmDeyVCcQySnXBMrUApORED/kE7iRnAoCQ1g7z+59xH1EOJGPAjScEgCnoMg/lJbloJb9rjxksZcB4hBQNYHSSfhDAIPpX03QWoj9Dl4cxf+8MYnNwxLiGCwc/AGODxF6zGqe9fIIOTe87p5LHdyDxor8laNzy2Xm16YssMp3RZa+DDWudjr9mYPdfjf7tJ0NzB33iOv9sZY7mjvByTxpfg6OBF1GEhabr7rNZbq/mqlfj1hV+XvU69Xs3y9ux5r+7cqh77b5Y+TjutlnOLwvwjtlKlSpUqVapUqVKlSpUqVapUqVLHpP8BGwysv2SsrfUAAAAASUVORK5CYII=" alt="SEO Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">git&git hub</h3>
+                        <p class="small-para blue-text">version control</p>
+                    </div>
+                </div>
+            </div>
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="data:image/png;base64,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" 
+                                 alt="Content Writting Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              poetry writer
+                          </h3>
+                        <p class="small-para blue-text">Writing</p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="data:image/png;base64,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" 
+                                 alt="Wordpress Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              ms office expert
+                          </h3>
+                        <p class="small-para blue-text">
+                              Content Management System
+                          </p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="data:image/png;base64,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" 
+                                 alt="Video Editing Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              backend developer
+                          </h3>
+                        <p class="small-para blue-text">developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-text">
+            <h1 class="my-heading">About Me</h1>
+            <p class="lead-para">
+              Hi, I’m Akash Sharma, a versatile Full Stack Developer with a passion for crafting seamless web experiences. With a strong foundation in both front-end and back-end technologies, I bring a comprehensive skill set to every project. My expertise spans HTML, CSS, JavaScript, and popular frameworks for front-end development, as well as server-side languages and databases for robust back-end solutions.
+
+              I’m proficient in using Git and GitHub for version control, ensuring efficient collaboration and code management. My familiarity with MS Office enhances my ability to create detailed documentation and manage project workflows effectively.
+              
+              In addition to my technical skills, I am also an avid writer. I enjoy translating complex concepts into clear, engaging content, whether it’s for technical documentation, blog posts, or creative writing. My diverse skill set allows me to approach problems from multiple angles and deliver high-quality results in both development and writing.
+            </p>
+            <p>
+              When I’m not coding or writing, you can find me exploring new technologies, working on personal projects, or engaging in creative pursuits. I’m always eager to take on new challenges and contribute to innovative projects.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="krrish.png" alt="About Image">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-heading">
+            <h1 class="my-heading text-center">My Services</h1>
+        </div>
+        <div class="services-content">
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card">
+                        <div class="icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="greet-heading blue-text">Web Design</h3>
+                        <p class="small-para">
+                            
+                        </p>
+                        <p class="small-para">
+                          🚀 Transform Your Online Presence with Akash Sharma Web Design Services! 🚀
+
+                          Are you ready to make a stunning impression online? With Akash Sharma’s Web Design Services, your website will stand out and captivate your audience from the very first click.
+                          
+                          🌟 Why Choose Us?
+                          
+                          ✨ Custom Designs: Tailored to your brand’s unique identity, ensuring a visually striking and memorable online presence.
+                          
+                          📱 Responsive Layouts: Perfectly optimized for all devices, from desktops to smartphones, so your site looks amazing everywhere.
+                          
+                          🧩 User-Centric Experience: Intuitive navigation and engaging interfaces that make it easy for your visitors to find what they’re looking for.
+                          
+                          🎨 Integrated Branding: Seamless incorporation of your brand’s colors, typography, and imagery for a cohesive and professional look.
+                          
+                          🛠️ CMS Integration: User-friendly content management systems that let you effortlessly update and manage your website.
+                          
+                          📈 SEO Optimization: Design elements that enhance search engine visibility and help your site climb the rankings.
+                          
+                          ♿ Accessibility Compliance: Websites designed to be inclusive and accessible to all users.
+                          Web development refers to the creating, 
+                          building, and maintaining
+                        of websites. It includes aspects such as 
+                          web design, web publishing,
+                        web programming, and database management. 
+                          It is the creation of an
+                        application that works over the internet 
+                          i.e. websites.
+                          Web development refers to the creating, 
+                          building, and maintaining
+                        as  a coder important to handle the design
+                        </p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              Web Development
+                          </h3>
+                        <p class="small-para">
+                            
+                        </p>
+                        <p class="small-para">
+                          🚀 Elevate Your Digital Presence with Akash Sharma Web Development! 🚀
+
+                          Is your website ready for a transformation? Akash Sharma Web Development delivers cutting-edge solutions that combine functionality with stunning design. Whether you’re launching a new site or revamping an existing one, I’ve got you covered!
+                          
+                          🌟 Why Partner with Us?
+                          
+                          🔧 Full Stack Expertise: From front-end elegance to back-end functionality, I handle all aspects of web development to ensure a seamless and effective online experience.
+                          
+                          📱 Responsive Design: Websites that look and perform beautifully on any device—desktop, tablet, or smartphone. Your site will adapt to every screen size.
+                          
+                          💻 Custom Solutions: Tailor-made development to meet your unique needs, ensuring that your site is not only visually appealing but also perfectly suited to your business goals.
+                          
+                          🛠️ Robust Functionality: Implementing powerful features and integrations that enhance user experience and streamline your business processes.
+                          
+                          🔍 SEO Integration: Building your site with SEO best practices in mind to improve your visibility and ranking in search engine results.
+                          
+                          🔒 Security and Performance: High standards of security and optimized performance to keep your site safe and running smoothly.
+                          
+                          🔄 Version Control: Utilizing Git and GitHub for efficient code management and collaboration, ensuring that your project is always on track.
+                          
+                          📈 Ongoing Support: Providing continuous support and maintenance to keep your website up-to-date and performing at its best.
+                        </p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card">
+                        <div class="icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="greet-heading blue-text">ms office</h3>
+                        <p class="small-para">
+                            
+                        </p>
+                        <p class="small-para">
+                          🌟 Master MS Office with Akash Sharma’s Expert Services! 🌟
+
+                          Unlock the full potential of Microsoft Office with tailored solutions from Akash Sharma. Whether you’re looking to enhance your productivity, streamline your workflows, or get the most out of Office applications, I’m here to help you achieve your goals.
+                          
+                          💼 Why Choose Our MS Office Services?
+                          
+                          📊 Advanced Excel Solutions: Master complex formulas, pivot tables, and data analysis to make informed decisions and create dynamic reports.
+                          
+                          📝 Professional Word Document Design: Create polished documents with advanced formatting, styles, and templates that make an impact.
+                          
+                          📅 Efficient Outlook Management: Organize your emails, schedules, and tasks effectively, and optimize your use of Outlook’s features for better communication and time management.
+                          
+                          📈 Powerful PowerPoint Presentations: Design visually stunning and engaging presentations that capture your audience’s attention and convey your message effectively.
+                          
+                          🗂️ Streamlined Access Databases: Develop and manage databases to keep your information organized and easily accessible.
+                          
+                          🔧 Custom Training and Support: Receive personalized training and ongoing support to enhance your skills and resolve any issues with MS Office applications.
+                          
+                          📝 Document Automation: Automate repetitive tasks and create templates to save time and increase efficiency in your everyday work.
+                          
+                          📈 Workflow Optimization: Implement strategies and best practices to streamline your workflows and improve overall productivity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card">
+                        <div class="icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              Content Writting
+                          </h3>
+                        <p class="small-para">
+                          
+                        </p>
+                        <p class="small-para">
+                          🖋️ Elevate Your Brand with Akash Sharma’s Expert Content Writing Services! 🖋️
+
+                          Struggling to find the right words to captivate your audience? Let Akash Sharma’s content writing services transform your ideas into compelling and impactful content that resonates with your readers and drives results.
+                          
+                          🌟 Why Choose Our Content Writing Services?
+                          
+                          ✍️ Engaging Content Creation: Crafting high-quality, engaging content that captures your brand’s voice and keeps your audience hooked.
+                          
+                          📚 Diverse Content Types: From blog posts and articles to website copy, product descriptions, and social media content, I provide writing solutions tailored to your needs.
+                          
+                          🔍 SEO Optimization: Creating content that not only appeals to your audience but also ranks well in search engines, enhancing your online visibility.
+                          
+                          🎯 Target Audience Focus: Writing content that speaks directly to your target audience, addressing their needs and interests to boost engagement and conversions.
+                          
+                          📈 Brand Storytelling: Developing a compelling narrative that highlights your brand’s unique value proposition and builds a strong connection with your audience.
+                          
+                          🛠️ Professional Editing and Proofreading: Ensuring your content is polished, error-free, and ready to make a positive impact.
+                          
+                          💡 Creative and Original Content: Providing fresh and original content that stands out from the competition and adds value to your readers.
+                          
+                          📅 Timely Delivery: Meeting deadlines consistently while delivering content that exceeds expectations in quality and relevance. works over the internet i.e. 
+                              websites.
+                        </p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card">
+                        <div class="icon">
+                            <i class="fab fa-wordpress-simple"></i>
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              git&git hub
+                          </h3>
+                        <p class="small-para">
+                          
+                        </p>
+                        <p class="small-para">
+                          🔧 Streamline Your Development Workflow with Akash Sharma’s Git & GitHub Expertise! 🔧
+
+                          Unlock the power of version control and collaborative development with Akash Sharma’s Git and GitHub services. Whether you’re managing code for a solo project or working with a team, I can help you leverage these essential tools for maximum efficiency and effectiveness.
+                          
+                          🌟 Why Choose Our Git & GitHub Services?
+                          
+                          🗂️ Version Control Mastery: Implement Git to track changes, manage code versions, and maintain a comprehensive history of your project’s development.
+                          
+                          🤝 Seamless Collaboration: Utilize GitHub for efficient collaboration, allowing multiple contributors to work together smoothly and manage code integration with ease.
+                          
+                          🔄 Branching and Merging: Expert guidance on creating and managing branches, handling merges, and resolving conflicts to keep your development process organized and efficient.
+                          
+                          📈 Repository Management: Setup and manage GitHub repositories with best practices, including repository structure, access controls, and organization.
+                          
+                          🔍 Code Reviews and Pull Requests: Facilitate code reviews and handle pull requests to ensure high-quality code and maintain consistency across your project.
+                          
+                          📚 Documentation and Tutorials: Provide clear documentation and tutorials to help you and your team understand and utilize Git and GitHub features effectively.
+                          
+                          🔧 Custom Workflow Solutions: Tailor Git and GitHub workflows to fit your specific project needs and team dynamics, optimizing your development process.
+                          
+                          🛠️ Troubleshooting and Support: Offer ongoing support to resolve any issues and ensure smooth operation of your version control and collaboration tools.
+                        </p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card">
+                        <div class="icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="greet-heading blue-text">
+                              Video Editing
+                          </h3>
+                        <p class="small-para">
+                           
+                        </p>
+                        <p class="small-para">
+                            W🎬 Transform Your Vision into Stunning Visuals with Akash Sharma’s Video Editing Services! 🎬
+
+                            Ready to elevate your video content and make it truly stand out? Akash Sharma’s expert video editing services will bring your footage to life with professional-quality edits that captivate and engage your audience.
+                            
+                            🌟 Why Choose Our Video Editing Services?
+                            
+                            🎥 High-Quality Editing: Transform raw footage into polished, visually appealing videos with professional editing techniques that enhance clarity and impact.
+                            
+                            🎨 Creative Enhancements: Add creative touches like transitions, effects, and animations to make your videos more dynamic and engaging.
+                            
+                            🔊 Audio Optimization: Improve audio quality with sound design, background music, and voiceover enhancements to ensure a crisp and clear auditory experience.
+                            
+                            📅 Timely Delivery: Efficient turnaround times to meet your deadlines while maintaining the highest standards of quality.
+                            
+                            📈 Tailored to Your Needs: Custom edits to match your vision and objectives, whether for promotional videos, social media content, or personal projects.
+                            
+                            🧩 Seamless Integration: Incorporate graphics, text overlays, and brand elements to create a cohesive and professional final product.
+                            
+                            🔄 Revisions and Feedback: Offer revisions to ensure the final video meets your expectations and perfectly aligns with your vision.
+                            
+                            📂 Various Formats: Deliver videos in multiple formats optimized for different platforms, from social media to websites and presentations..
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact me section -->
+    <section class="contact" id="contact">
+        <div class="contact-heading">
+            <h1 class="my-heading text-center">Contact Me</h1>
+        </div>
+        <div class="contact-content">
+            <div class="contact-form-container">
+                <h1 class="greet-heading">Get In Touch</h1>
+                <form class="contact-form">
+                    <input class="form-controls" type="text" 
+                           placeholder="Your Name">
+                    <input class="form-controls" type="text" 
+                           placeholder="Your Email">
+                    <input class="form-controls" type="text" 
+                           placeholder="Your Phone">
+                    <textarea class="form-controls" 
+                              placeholder="Write your message" 
+                              name="message" id="" cols="30"
+                              rows="10">
+                      </textarea>
+                    <input class="form-btn btn common-btn" 
+                           type="submit" value="Send Message">
+                </form>
+            </div>
+            <div class="contact-details">
+                <h1 class="greet-heading">My Contact Details</h1>
+                <div class="details">
+                    <h5 class="contact-heading">EMAIL</h5>
+                    <p class="contact-text">example@gmail.com</p>
+                </div>
+                <div class="details">
+                    <h5 class="contact-heading">PHONE</h5>
+                    <p class="contact-text">+91 0123456789</p>
+                </div>
+                <div class="details">
+                    <h5 class="contact-heading">FAX</h5>
+                    <p class="contact-text">+91 0123456789</p>
+                </div>
+                <div class="details">
+                    <h5 class="contact-heading">ADDRESS</h5>
+                    <p class="contact-text">uttar pradesh,agra</p>
+                    <p>city of love</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content text-center">
+            <h4>
+                Copyright © KRRISH JHA |made with ❤️😎love and efforts
+                
+            </h4>
+            <div class="social-links">
+                <div class="footer-menu">
+                    <ul class="footer-menu-list">
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-items">
+                            <a class="footer-links" href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        integrity=
+"sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+      </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
